@@ -16,15 +16,18 @@
             font-family: 'Inter', sans-serif; 
             overflow: hidden;
         }
+        #screen-select-test {
+            overflow-y: auto;
+        }
         .option-card.active { border-color: #2563eb; background-color: #eff6ff; color: #1e40af; }
         .option-card.correct { border-color: #22c55e; background-color: #f0fdf4; color: #166534; }
         .option-card.incorrect { border-color: #ef4444; background-color: #fef2f2; color: #991b1b; }
         .option-card.disabled { opacity: 0.7; cursor: not-allowed; }
         
         .scrollable-content {
-            max-height: calc(100vh - 320px);
             overflow-y: auto;
             scrollbar-width: thin;
+            min-height: 0;
         }
 
         .test-card {
@@ -105,7 +108,7 @@
         <div class="flex-1 overflow-hidden p-3 md:p-6">
             <div class="max-w-4xl mx-auto h-full flex flex-col">
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full overflow-hidden">
-                    <div class="p-5 md:p-8 flex-1 overflow-y-auto scrollable-content">
+                    <div class="p-5 md:p-8 flex-1 scrollable-content" style="min-height:0;">
                         <div class="flex items-center gap-2 mb-4">
                             <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider">Lý thuyết / Tình huống</span>
                         </div>
@@ -1611,13 +1614,14 @@
   }
                 ]
             },
-            test2: {
+            
+        test3: {
                 name: "Ngân hàng đề thi ôn tập",
-                description: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 1: CÁC QUY ĐỊNH PHÁP LUẬT VỀ KINH DOANH BĐS",
                 icon: "fa-graduation-cap",
                 color: "purple",
                 questions: [
-                    {
+					{
       "question": "Theo Luật Kinh doanh bất động sản, tổ chức, cá nhân muốn kinh doanh BĐS phải có điều kiện gì?",
       "options": [
         "Thành lập doanh nghiệp/HTX, trừ trường hợp cá nhân kinh doanh nhỏ lẻ.",
@@ -1776,8 +1780,16 @@
         "25%."
       ],
       "correct": 1
-    },
-    {
+    }
+				]
+			},
+        test4: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 2: CÁC QUY ĐỊNH PHÁP LUẬT VỀ NHÀ Ở LIÊN QUAN ĐẾN KINH DOANH BẤT ĐỘNG SẢN",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Theo Luật Nhà ở 2023, tổ chức, cá nhân nước ngoài được sở hữu nhà ở tại Việt Nam trong khu vực nào?",
       "options": [
         "Trong bất kỳ dự án nhà ở thương mại nào trên toàn quốc.",
@@ -1936,8 +1948,16 @@
         "Tối đa bằng 12 tháng tiền thuê nhà tạm tính."
       ],
       "correct": 3
-    },
-    {
+    }
+				]
+			},
+        test5: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 3: CÁC QUY ĐỊNH PHÁP LUẬT VỀ ĐẤT ĐAI LIÊN QUAN ĐẾN KINH DOANH BẤT ĐỘNG SẢN",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Theo Luật Đất đai 2024, Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất là gì?",
       "options": [
         "Là văn bản của cơ quan có thẩm quyền cho phép người sử dụng đất thực hiện các quyền chuyển nhượng, tặng cho.",
@@ -2096,8 +2116,16 @@
         "Không được phân cấp, không được ủy quyền."
       ],
       "correct": 3
-    },
-    {
+    }
+				]
+			},
+        test6: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 4: CÁC QUY ĐỊNH PHÁP LUẬT VỀ ĐẦU TƯ LIÊN QUAN ĐẾN KINH DOANH BẤT ĐỘNG SẢN",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Theo Luật Kinh doanh Bất động sản 2023, Dự án bất động sản là dự án đầu tư xây dựng công trình để kinh doanh những loại tài sản nào sau đây?",
       "options": [
         "Nhà ở, công trình xây dựng, máy móc thiết bị có giá trị cao.",
@@ -2256,8 +2284,16 @@
         "Quy hoạch du lịch, dịch vụ."
       ],
       "correct": 2
-    },
-    {
+    }
+				]
+			},
+        test7: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 5: CÁC QUY ĐỊNH PHÁP LUẬT VỀ DÂN SỰ LIÊN QUAN ĐẾN KINH DOANH BẤT ĐỘNG SẢN",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Năng lực pháp luật dân sự của pháp nhân chấm dứt kể từ thời điểm nào?",
       "options": [
         "Kể từ thời điểm pháp nhân hoàn thành thủ tục giải thể và thanh toán hết các khoản nợ.",
@@ -2456,8 +2492,16 @@
         "Trị giá thành tiền để hoàn trả."
       ],
       "correct": 3
-    },
-    {
+    }
+				]
+			},
+        test8: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 6: CÁC QUY ĐỊNH PHÁP LUẬT VỀ CÔNG CHỨNG, CHỨNG THỰC LIÊN QUAN ĐẾN KINH DOANH BĐS",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Theo Luật Công chứng 2024, tổ chức hành nghề công chứng bao gồm những loại hình nào?",
       "options": [
         "Chỉ có Phòng Công chứng.",
@@ -2656,8 +2700,16 @@
         "Không giới hạn số thành viên"
       ],
       "correct": 0
-    },
-    {
+    }
+				]
+			},
+        test9: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 7: CÁC QUY ĐỊNH PHÁP LUẬT VỀ DOANH NGHIỆP LIÊN QUAN ĐẾN KINH DOANH BĐS",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Công ty TNHH hai thành viên trở lên có số lượng thành viên tối đa là bao nhiêu?",
       "options": [
         "50",
@@ -2846,8 +2898,16 @@
         "28%"
       ],
       "correct": 1
-    },
-    {
+    }
+				]
+			},
+        test10: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 8: CÁC QUY ĐỊNH PHÁP LUẬT VỀ THUẾ, PHÍ, LỆ PHÍ LIÊN QUAN ĐẾN KINH DOANH BẤT ĐỘNG SẢN",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Doanh thu từ hoạt động chuyển nhượng bất động sản được xác định:",
       "options": [
         "Thu nhập khác",
@@ -3006,8 +3066,16 @@
         "400 triệu đồng"
       ],
       "correct": 3
-    },
-    {
+    }
+				]
+			},
+        test11: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 9: CÁC QUY ĐỊNH PHÁP LUẬT VỀ PHÒNG CHỐNG RỬA TIỀN LIÊN QUAN ĐẾN KINH DOANH BĐS",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Tình huống nào sau đây được coi là giao dịch đáng ngờ:",
       "options": [
         "Khách hàng từ chối cung cấp thông tin hoặc cung cấp thông tin nhận biết khách hàng không chính xác, không đầy đủ, không nhất quán.",
@@ -3176,8 +3244,16 @@
         "200 – 250 triệu đồng"
       ],
       "correct": 0
-    },
-    {
+    }
+				]
+			},
+        test12: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 10: CÁC QUY ĐỊNH PHÁP LUẬT VỀ XỬ LÍ VI PHẠM HÀNH CHÍNH LIÊN QUAN ĐẾN KINH DOANH BĐS",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Xử phạt đối với hành vi không công khai giấy phép xây dựng tại địa điểm thi công xây dựng trong suốt quá trình thi công đối với xây dựng công trình có yêu cầu phải lập báo cáo nghiên cứu khả thi đầu tư xây dựng hoặc công trình phải lập báo cáo kinh tế - kỹ thuật đầu tư xây dựng như sau:",
       "options": [
         "5 – 10 triệu đồng",
@@ -3306,8 +3382,16 @@
         "Thị trường giao dịch bất động sản công nghiệp và du lịch."
       ],
       "correct": 2
-    },
-    {
+    }
+				]
+			},
+        test13: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 11: TỔNG QUAN CHUNG VỀ THỊ TRƯỜNG BĐS",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Yếu tố nào sau đây thuộc về nhóm yếu tố hành chính - pháp luật tác động trực tiếp đến việc hình thành nguồn cung bất động sản?",
       "options": [
         "Dân số và cơ cấu tuổi.",
@@ -3466,8 +3550,16 @@
         "Theo ý kiến Hội đồng nhân dân"
       ],
       "correct": 0
-    },
-    {
+    }
+				]
+			},
+        test14: {
+                name: "Ngân hàng đề thi ôn tập",
+                description: "CHUYÊN ĐỀ 12: NGUYÊN LÝ HÌNH THÀNH GIÁ BĐS VÀ TƯ VẤN GIÁ BĐS",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Bảng giá đất hằng năm được công bố và áp dụng từ thời điểm nào?",
       "options": [
         "Từ ngày 01 tháng 01 hằng năm",
@@ -3616,8 +3708,16 @@
         "Để có chuyện nói với khách hàng."
       ],
       "correct": 1
-    },
-    {
+    }
+				]
+			},
+        test15: {
+                name: "Ngân hàng đề thi ôn tập - Chuyên môn",
+                description: "CHUYÊN ĐỀ 1: TỔNG QUAN VỀ DỊCH VỤ MÔI GIỚI BẤT ĐỘNG SẢN",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Tình huống : Công ty môi giới bất động sản M chỉ có một người duy nhất sở hữu Chứng chỉ hành nghề môi giới bất động sản. Nếu người này nghỉ việc, công ty M có còn đủ điều kiện kinh doanh dịch vụ môi giới bất động sản theo Luật KD bất động sản 2023 không?",
       "options": [
         "Vẫn đủ điều kiện bình thường.",
@@ -4216,8 +4316,16 @@
         "Ưu tiên các yếu tố về phong thủy và lịch sử nhà."
       ],
       "correct": 1
-    },
-    {
+    }
+				]
+			},
+        test16: {
+                name: "Ngân hàng đề thi ôn tập - Chuyên môn",
+                description: "CHUYÊN ĐỀ 02: QUY TRÌNH VÀ KỸ NĂNG MÔI GIỚI BẤT ĐỘNG SẢN",
+                icon: "fa-graduation-cap",
+                color: "purple",
+                questions: [
+					{
       "question": "Việc đăng ký thế chấp quyền sử dụng đất tại cơ quan nhà nước có thẩm quyền nhằm mục đích gì?",
       "options": [
         "Để tính thuế sử dụng đất.",
@@ -5527,9 +5635,9 @@
       ],
       "correct": 0
     }
-                ]
-            }
-        };
+				]
+			}
+		};
 
         // ========== BIẾN TOÀN CỤC ==========
         let currentTestKey = null;
@@ -5542,7 +5650,7 @@
 
         // ========== HÀM CHÍNH ==========
         function showTestSelection() {
-            $('#screen-select-test').show();
+            $('#screen-select-test').css('display','flex');
             $('#screen-quiz').hide();
             $('#screen-result').hide();
             
@@ -5591,7 +5699,7 @@
             
             $('#test-name').text(test.name);
             $('#screen-select-test').hide();
-            $('#screen-quiz').show();
+            $('#screen-quiz').css('display','flex');
             updateUI();
         }
 
@@ -5775,7 +5883,7 @@
             $('#result-percent').text(`${percent}%`);
             $('#result-text').html(`Bạn đã đúng <b>${stats.correct}</b>/${stats.total} câu.<br><small class="text-red-400">Sai ${stats.incorrect} câu</small>`);
             $('#screen-quiz').hide();
-            $('#screen-result').show();
+            $('#screen-result').css('display','flex');
         }
     </script>
 </body>
