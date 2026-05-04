@@ -14,10 +14,16 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
         body { 
             font-family: 'Inter', sans-serif; 
-            overflow: hidden;
         }
         #screen-select-test {
             overflow-y: auto;
+        }
+        #screen-quiz {
+            position: fixed;
+            inset: 0;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
         }
         .option-card.active { border-color: #2563eb; background-color: #eff6ff; color: #1e40af; }
         .option-card.correct { border-color: #22c55e; background-color: #f0fdf4; color: #166534; }
@@ -39,10 +45,10 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 h-screen flex flex-col">
+<body class="bg-slate-50 min-h-screen flex flex-col">
 
     <!-- Screen: Menu - Chọn bộ đề -->
-    <div id="screen-select-test" class="flex-1 flex items-center justify-center p-4">
+    <div id="screen-select-test" class="flex-1 flex justify-center p-4 overflow-y-auto">
         <div class="max-w-2xl w-full">
             <div class="text-center mb-8">
                 <div class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3 shadow-lg">
@@ -59,7 +65,7 @@
     </div>
 
     <!-- Screen: Quiz -->
-    <div id="screen-quiz" class="hidden h-screen flex flex-col">
+    <div id="screen-quiz" style="display:none;">
         <!-- Header -->
         <div class="bg-white border-b border-slate-100 p-3 shrink-0">
             <div class="max-w-4xl mx-auto flex flex-col gap-3">
@@ -5699,7 +5705,7 @@
             
             $('#test-name').text(test.name);
             $('#screen-select-test').hide();
-            $('#screen-quiz').css('display','flex');
+            $('#screen-quiz').css('display','flex').css('flex-direction','column');
             updateUI();
         }
 
